@@ -39,3 +39,8 @@ if __name__ == "__main__":
                     print("Ошибка!")
                     exit()  # если введенное значение не является числом, то программа завершается
                 m[j][i] = 1.0 / m[i][j]
+    weights = calculateWeights(m)
+    # вывод данных
+    print("Весовые коэффициенты:")
+    for weight in weights:
+        print(f"{weight:.2f}", end=" ")
