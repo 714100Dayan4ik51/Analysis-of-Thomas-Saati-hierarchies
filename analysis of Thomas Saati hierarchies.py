@@ -17,3 +17,13 @@ def calculateWeights(matrix):
         weights[i] = sum / n
 
     return weights
+
+
+if __name__ == "__main__":
+    n = str(input("Введите количество критериев: "))
+    # проверяем введенные данные на правильность
+    if not n.isnumeric():
+        print("Ошибка!")
+        exit()  # если n не является числом, то программа завершается
+    n = int(n)
+    m = [[0.0] * n for _ in range(n)]  # создаем матрицу, заполненную нулями, размером n x n
